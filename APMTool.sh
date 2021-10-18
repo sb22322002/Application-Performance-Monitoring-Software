@@ -29,6 +29,16 @@ spawnAll(){
 	./APM6 $ip &
 }
 
+# required function to collect system level metrics
+sysMetrics(){
+
+}
+
+# required function to collect process level metrics 
+procMetrics(){
+
+}
+
 killAll(){
 	kill $(ps | grep APM1 | awk '{print $1}')
 	kill $(ps | grep APM2 | awk '{print $1}')
