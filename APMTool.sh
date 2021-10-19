@@ -27,10 +27,7 @@ spawnAll(){
 	./APM6 $ip &
 
 	# initialize variables to keep track of time
-	#############################################################
-	# time won't display first time
-	#############################################################
-	declare -i time=0
+	time=0
 	
 	# create new files system_metrics.csv and <proc_name>_metrics.csv
 	echo -n "" > system_metrics.csv
@@ -107,5 +104,5 @@ do
 	echo "Metrics collected - TIME: $time seconds"
 
 	sleep 5
-	time=$(($time+5))
+	time=$(echo "$time+5" | bc)
 done
