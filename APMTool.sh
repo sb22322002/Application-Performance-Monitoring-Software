@@ -30,7 +30,7 @@ spawnAll(){
 	#############################################################
 	# time won't display first time
 	#############################################################
-	declare -i time="0"
+	declare -i time=0
 	
 	# create new files system_metrics.csv and <proc_name>_metrics.csv
 	echo -n "" > system_metrics.csv
