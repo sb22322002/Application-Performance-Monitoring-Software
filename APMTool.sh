@@ -79,12 +79,12 @@ cleanup(){
 	#############################################################
 	# trying to get rid of the messages at the end when killing jobs
 	#############################################################
-	kill $(ps | grep APM1 | awk '{$1}') 2>/dev/null 
-	kill $(ps | grep APM2 | awk '{$1}') 2>/dev/null
-	kill $(ps | grep APM3 | awk '{$1}') 2>/dev/null
-	kill $(ps | grep APM4 | awk '{$1}') 2>/dev/null
-	kill $(ps | grep APM5 | awk '{$1}') 2>/dev/null
-	kill $(ps | grep APM6 | awk '{$1}') 2>/dev/null
+	kill $(ps | grep APM1 | awk '{print $1}') 2>/dev/null 
+	kill $(ps | grep APM2 | awk '{print $1}') 2>/dev/null
+	kill $(ps | grep APM3 | awk '{print $1}') 2>/dev/null
+	kill $(ps | grep APM4 | awk '{print $1}') 2>/dev/null
+	kill $(ps | grep APM5 | awk '{print $1}') 2>/dev/null
+	kill $(ps | grep APM6 | awk '{print $1}') 2>/dev/null
 
 	echo "Complete"
 }
